@@ -107,7 +107,7 @@ namespace ProductCatalogManager.Controllers
         public async Task<IActionResult> Excel()
         {
             var products = productBusiness.GetProducts();
-
+            //this part should have been in business layer
             using(var workbook = new XLWorkbook())
             {
                 var worksheet = workbook.Worksheets.Add("Products");
