@@ -78,7 +78,7 @@ namespace ProductCatalogManager.Controllers
         }
 
         [Route("[action]/{id}")]
-        [HttpPost("{id:length(24)}")]
+        [HttpPost]
         [ProducesResponseType(typeof(void), (int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         public async Task<IActionResult> ConfirmProductById(string id)
